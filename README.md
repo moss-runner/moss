@@ -5,7 +5,7 @@
 **A fast, modern task runner built in Rust.**
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Build](https://github.com/moss-runner/moss/actions/workflows/ci.yml/badge.svg)](https://github.com/aji-fullstack/moss/actions)
+[![Build](https://github.com/moss-runner/moss/actions/workflows/ci.yml/badge.svg)](https://github.com/moss-runner/moss/actions)
 
 [Getting Started](#getting-started) · [Syntax](#syntax-overview) · [Features](#features) · [Migration Guide](docs/migration.md) · [Docs](docs/syntax.md)
 
