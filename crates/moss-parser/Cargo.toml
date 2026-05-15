@@ -1,0 +1,9 @@
+[package]
+name        = "moss-parser"
+version     = "0.1.0"
+edition     = "2021"
+description = "Mossfile parser — lexer, AST, and parser for the Moss task runner"
+license     = "MIT"
+
+[dependencies]
+thiserror = "1"

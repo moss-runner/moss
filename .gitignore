@@ -1,0 +1,20 @@
+# Build artifacts
+target/
+
+# Cargo lock (keep for binaries, ignore for libraries)
+# We keep Cargo.lock since moss-cli is a binary crate
+# Cargo.lock
+
+# Editor directories
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Environment files
+.env
+.env.local
+
+# Moss own output (dogfooding)
+dist/

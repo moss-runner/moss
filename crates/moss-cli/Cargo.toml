@@ -1,0 +1,20 @@
+[package]
+name        = "moss-cli"
+version     = "0.1.0"
+edition     = "2021"
+description = "Moss — a modern task runner"
+license     = "MIT"
+
+# The binary is named `moss` so users type `moss run build`, not `moss-cli run build`.
+[[bin]]
+name = "moss"
+path = "src/main.rs"
+
+[dependencies]
+moss-parser  = { path = "../moss-parser" }
+moss-core    = { path = "../moss-core" }
+tokio        = { version = "1", features = ["full"] }
+clap         = { version = "4", features = ["derive", "color"] }
+clap_complete = "4"
+colored      = "2"
+indicatif    = "0.17"

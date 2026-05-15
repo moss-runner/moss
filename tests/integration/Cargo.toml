@@ -1,0 +1,13 @@
+[package]
+name    = "moss-integration-tests"
+version = "0.1.0"
+edition = "2021"
+
+[[test]]
+name = "integration"
+path = "integration.rs"
+
+[dev-dependencies]
+moss-parser = { path = "../../crates/moss-parser" }
+moss-core   = { path = "../../crates/moss-core" }
+tokio       = { version = "1", features = ["full"] }

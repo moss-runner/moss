@@ -1,0 +1,13 @@
+[package]
+name        = "moss-core"
+version     = "0.1.0"
+edition     = "2021"
+description = "Moss task runner — core execution engine"
+license     = "MIT"
+
+[dependencies]
+moss-parser = { path = "../moss-parser" }
+tokio       = { version = "1", features = ["full"] }
+notify      = { version = "6", default-features = false, features = ["macos_fsevent"] }
+thiserror   = "1"
+glob        = "0.3"

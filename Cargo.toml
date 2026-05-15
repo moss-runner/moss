@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "crates/moss-parser",
+    "crates/moss-core",
+    "crates/moss-cli",
+    "tests/integration",
+]
+resolver = "2"
