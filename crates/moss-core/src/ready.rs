@@ -35,11 +35,10 @@ use tokio::{
 ///     let mut detector = ReadyDetector::new(stdout, "Listening on".to_string());
 ///     let mut rx = detector.ready_rx();
 ///
-///     tokio::spawn(async move { 
-///         detector.run(|line| println!("{}", line)).await 
+///     tokio::spawn(async move {
+///         detector.run(|line| println!("{}", line)).await
 ///     });
 ///
-///     // Tunggu sampai sinyal ready muncul
 ///     rx.changed().await.unwrap();
 ///     println!("Server is ready!");
 /// }
