@@ -14,6 +14,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.1.1] — 2026-05-15
+
+### Added
+- `setup_test` helper function in `moss-core` to simplify the *boilerplate* in dependency graph unit testing.
+
+### Fixed
+- Fixed *doc-test* failure on `ReadyDetector` by providing a valid `child` variable in the documentation example.
+- Handled compilation error `E0061` by updating the `detector.run()` call in the documentation to include the *closure* argument `line_sink`.
+- Fixed internal logic in `DependencyGraph` to ensure task execution order always ends with the requested *target task*.
+
+### Changed
+- Refactor the `graph.rs` test module to be cleaner and follow the DRY (*Don't Repeat Yourself*) principle.
+
 ## [0.1.0] — 2026-05-15
 
 ### Added
@@ -37,5 +50,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `docs/syntax.md` — full Mossfile syntax reference
 - `docs/migration.md` — migration guide from GNU Make and just
 
-[Unreleased]: https://github.com/moss-runner/moss/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/moss-runner/moss/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/moss-runner/moss/releases/tag/v0.1.1
 [0.1.0]: https://github.com/moss-runner/moss/releases/tag/v0.1.0
