@@ -4,9 +4,8 @@
 
 **A fast, modern task runner built in Rust.**
 
-[![Crates.io](https://img.shields.io/crates/v/moss-cli.svg)](https://crates.io/crates/moss-cli)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Build](https://github.com/aji-fullstack/moss/actions/workflows/ci.yml/badge.svg)](https://github.com/aji-fullstack/moss/actions)
+[![Build](https://github.com/moss-runner/moss/actions/workflows/ci.yml/badge.svg)](https://github.com/aji-fullstack/moss/actions)
 
 [Getting Started](#getting-started) · [Syntax](#syntax-overview) · [Features](#features) · [Migration Guide](docs/migration.md) · [Docs](docs/syntax.md)
 
