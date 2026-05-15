@@ -18,25 +18,31 @@ use tokio::{
 /// # Example
 ///
 /// ```rust,no_run
-/// # use tokio::process::Command;
-/// # use moss_core::ready::ReadyDetector;
-/// # #[tokio::main] async fn main() {
-/// let mut child = Command::new("cargo")
-///     .args(["run"])
-///     .stdout(std::process::Stdio::piped())
-///     .spawn()
-///     .unwrap();
+/// use tokio::process::Command;
+/// use std::process::Stdio;
+/// use moss_core::ready::ReadyDetector;
 ///
-/// let stdout = child.stdout.take().unwrap();
-/// let mut detector = ReadyDetector::new(stdout, "Listening on".to_string());
-/// let mut rx = detector.ready_rx();
+/// #[tokio::main]
+/// async fn main() {
+///     // Kita harus benar-benar mendefinisikan 'child' agar doc-test lulus
+///     let mut child = Command::new("echo")
+///         .arg("Listening on 8080")
+///         .stdout(Stdio::piped())
+///         .spawn()
+///         .unwrap();
 ///
-/// tokio::spawn(async move { detector.run().await });
+///     let stdout = child.stdout.take().unwrap();
+///     let mut detector = ReadyDetector::new(stdout, "Listening on".to_string());
+///     let mut rx = detector.ready_rx();
 ///
-/// // Wait until the process signals it is ready.
-/// rx.changed().await.unwrap();
-/// println!("Server is ready!");
-/// # }
+///     tokio::spawn(async move { 
+///         detector.run(|line| println!("{}", line)).await 
+///     });
+///
+///     // Tunggu sampai sinyal ready muncul
+///     rx.changed().await.unwrap();
+///     println!("Server is ready!");
+/// }
 /// ```
 pub struct ReadyDetector {
     stdout: ChildStdout,

@@ -131,13 +131,6 @@ mod tests {
     use super::*;
     use moss_parser::parse;
 
-    fn graph_for(src: &str) -> (moss_parser::Mossfile, DependencyGraph<'_>) {
-        // We cannot return a graph that borrows a local — use a helper that
-        // returns the mossfile so the caller owns it.
-        let _ = src; // placeholder; see individual tests below
-        unreachable!()
-    }
-
     #[test]
     fn test_single_task_no_deps() {
         let src = "task build:\n  cargo build\n";
