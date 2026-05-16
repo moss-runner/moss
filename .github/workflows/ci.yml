@@ -63,13 +63,13 @@ jobs:
         uses: Swatinem/rust-cache@v2
 
       - name: Run parser tests
-        run: cargo test -p moss-parser
+        run: rustup run stable cargo test -p moss-parser
 
       - name: Run core tests
-        run: cargo test -p moss-core
+        run: rustup run stable cargo test -p moss-core
 
       - name: Run integration tests
-        run: cargo test -p moss-integration-tests
+        run: rustup run stable cargo test -p moss-integration-tests
 
   # ── Build release binary ──────────────────────────────────────────────────────
   build:
@@ -101,7 +101,7 @@ jobs:
         uses: Swatinem/rust-cache@v2
 
       - name: Build release binary
-        run: cargo build --release --target ${{ matrix.target }} -p moss-cli
+        run: rustup run stable cargo build --release --target ${{ matrix.target }} -p moss-cli
 
       - name: Upload binary artifact
         uses: actions/upload-artifact@v4
