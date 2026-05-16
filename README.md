@@ -34,9 +34,8 @@ cargo install moss-cli
 
 **From source:**
 ```bash
-git clone https://github.com/yourusername/moss
+git clone https://github.com/moss-runner/moss
 cd moss
-cargo install --path crates/moss-cli
 ```
 
 ### Quick start
